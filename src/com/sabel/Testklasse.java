@@ -4,6 +4,8 @@ public class Testklasse {
 
     public static void main(String[] args) {
 
-    } // Ende Main
+        Farbenspiel farbenspiel = new Farbenspiel();
 
-} // Ende Testklasse
+    } // End Main
+
+} // End Testklasse
