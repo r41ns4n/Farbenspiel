@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 public class MeinActionListener implements ActionListener {
 
+    // Datafields
     private JPanel jPanel;
 
     public MeinActionListener(JPanel jPanel) {
@@ -15,7 +16,6 @@ public class MeinActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(e.getActionCommand().toLowerCase());
         switch (e.getActionCommand().toLowerCase()) {
             case "red":
                 jPanel.setBackground(Color.RED);
@@ -26,9 +26,12 @@ public class MeinActionListener implements ActionListener {
             case "yellow":
                 jPanel.setBackground(Color.YELLOW);
                 break;
+            case "green":
+                jPanel.setBackground(Color.GREEN);
+                break;
         } // End Switch
 
-    } // End Ovverride
+    } // End Method actionPerformed(ActionEvent e)
 
 } // End Class MeinActionListener
 

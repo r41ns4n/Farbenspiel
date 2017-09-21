@@ -9,14 +9,14 @@ public class Farbenspiel extends JFrame{
     private JButton jButtonBlue;
     private JButton jButtonRed;
     private JButton jButtonYellow;
+    private JButton jButtonGreen;
 
     public Farbenspiel() {
         this.setTitle("Farbenspiel");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
         this.initEvents();
-
-        this.setSize(300,300);
+        this.setSize(400,300);
         this.setVisible(true);
     } // End Constructor Farbenspiel()
 
@@ -25,7 +25,8 @@ public class Farbenspiel extends JFrame{
         jButtonBlue.addActionListener(mal);
         jButtonRed.addActionListener(mal);
         jButtonYellow.addActionListener(mal);
-    }
+        jButtonGreen.addActionListener(mal);
+    } // End Method initEvents()
 
     public void initComponents() {
         jPanel = new JPanel();
@@ -33,12 +34,14 @@ public class Farbenspiel extends JFrame{
         jButtonBlue = new JButton("Blue");
         jButtonRed = new JButton("Red");
         jButtonYellow = new JButton("Yellow");
+        jButtonGreen = new JButton("Green");
         // addButtons
         this.jPanel.add(jButtonBlue);
         this.jPanel.add(jButtonRed);
         this.jPanel.add(jButtonYellow);
+        this.jPanel.add(jButtonGreen);
         // addjPannel
         this.add(jPanel);
-    } // End Methode initComponents
+    } // End Method initComponents
 
  } // End Class Farbenspiel
