@@ -26,21 +26,21 @@ public class Farbenspiel extends JFrame{
         jButtonRed.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jButtonRed.setBackground(Color.RED);
+                jPanel.setBackground(Color.RED);
             } // End Method RED
         } //End addActionListener(new ActionListener()
         );
         jButtonBlue.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jButtonBlue.setBackground(Color.BLUE);
+                jPanel.setBackground(Color.BLUE);
             } // End Method Blue
         } // addActionListener(new ActionListener()
         );
         jButtonYellow.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jButtonYellow.setBackground(Color.YELLOW);
+                jPanel.setBackground(Color.YELLOW);
             } // End Method YELLOW
         } // addActionListener(new ActionListener()
         );
