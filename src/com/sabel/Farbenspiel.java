@@ -14,9 +14,18 @@ public class Farbenspiel extends JFrame{
         this.setTitle("Farbenspiel");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
+        this.initEvents();
+
         this.setSize(300,300);
         this.setVisible(true);
     } // End Constructor Farbenspiel()
+
+    private void initEvents() {
+        MeinActionListener mal = new MeinActionListener(jPanel);
+        jButtonBlue.addActionListener(mal);
+        jButtonRed.addActionListener(mal);
+        jButtonYellow.addActionListener(mal);
+    }
 
     public void initComponents() {
         jPanel = new JPanel();
