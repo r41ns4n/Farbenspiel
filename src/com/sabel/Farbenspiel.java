@@ -1,6 +1,9 @@
 package com.sabel;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Farbenspiel extends JFrame{
 
@@ -14,9 +17,35 @@ public class Farbenspiel extends JFrame{
         this.setTitle("Farbenspiel");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
+        this.initEvents();
         this.setSize(300,300);
         this.setVisible(true);
     } // End Constructor Farbenspiel()
+
+    private void initEvents() {
+        jButtonRed.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jButtonRed.setBackground(Color.RED);
+            } // End Method RED
+        } //End addActionListener(new ActionListener()
+        );
+        jButtonBlue.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jButtonBlue.setBackground(Color.BLUE);
+            } // End Method Blue
+        } // addActionListener(new ActionListener()
+        );
+        jButtonYellow.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jButtonYellow.setBackground(Color.YELLOW);
+            } // End Method YELLOW
+        } // addActionListener(new ActionListener()
+        );
+
+    } // End Method initEvents()
 
     public void initComponents() {
         jPanel = new JPanel();
