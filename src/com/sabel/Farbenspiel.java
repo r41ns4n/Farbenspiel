@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Farbenspiel extends JFrame implements ActionListener{
+public class Farbenspiel extends JFrame{
 
     // Datafields
     private JPanel jPanel;
@@ -23,9 +23,10 @@ public class Farbenspiel extends JFrame implements ActionListener{
     } // End Constructor Farbenspiel()
 
     private void initEvents() {
-        jButtonBlue.addActionListener(this);
-        jButtonRed.addActionListener(this);
-        jButtonYellow.addActionListener(this);
+        MeinInnererActionListener mial = new MeinInnererActionListener();
+        jButtonBlue.addActionListener(mial);
+        jButtonRed.addActionListener(mial);
+        jButtonYellow.addActionListener(mial);
     } // End Method initEvents
 
     public void initComponents() {
@@ -42,21 +43,25 @@ public class Farbenspiel extends JFrame implements ActionListener{
         this.add(jPanel);
     } // End Methode initComponents
 
-    @Override
-    public void actionPerformed (ActionEvent actionEvent) {
 
-        switch (actionEvent.getActionCommand().toLowerCase()) {
-            case "blue":
-                jPanel.setBackground(Color.BLUE);
-                break;
-            case "red":
-                jPanel.setBackground(Color.RED);
-                break;
-            case "yellow":
-                jPanel.setBackground(Color.YELLOW);
-                break;
-        } // End switch
+    public class MeinInnererActionListener implements ActionListener{
 
-    } // End Methode actionPerformed
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            switch (e.getActionCommand().toLowerCase()) {
+                case "red" :
+                    jPanel.setBackground(Color.RED);
+                    break;
+                case "blue" :
+                    jPanel.setBackground(Color.BLUE);
+                    break;
+                case "yellow" :
+                    jPanel.setBackground(Color.YELLOW);
+                    break;
+            } // End switch
+
+        } // End Method actionPerformed(ActionEvent e)
+
+    } // End Class MeinInnererActionListener
 
 } // End Class Farbenspiel
